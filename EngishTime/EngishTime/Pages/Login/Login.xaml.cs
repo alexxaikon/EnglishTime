@@ -6,7 +6,7 @@ using Xamarin.Forms.Xaml;
 namespace EngishTime.Pages.Login
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Login : ContentPage
+    public partial class Login : ContentPage //ЛАПКАзаврик =) 
     {
         public Login()
         {
@@ -14,9 +14,15 @@ namespace EngishTime.Pages.Login
             signInButton.BorderRadius = 30;
         }
 
-        private async void signInButton_Clicked(object sender, EventArgs e)
+        private void signInButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new EngishTime.Pages.MainMenu.MainMenu(),true);
+
+            App.Current.MainPage = new NavigationPage(new EngishTime.Pages.MainMenu.MainMenu())
+            {
+                BarBackgroundColor = Color.FromHex("#673AB7")
+            };
+
+            //await Navigation.PushAsync(new EngishTime.Pages.MainMenu.MainMenu(),true);
         }
     }
 }

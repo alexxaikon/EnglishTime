@@ -7,13 +7,13 @@
 
         <Label Text="Add new word to your" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Large"
                  RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-200}"
-                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.07,  Constant=0}" 
+                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.0,  Constant=40}" 
                  RelativeLayout.WidthConstraint = "400" 
                  RelativeLayout.HeightConstraint = "30"/>
 
         <Label Text="own vocabulary" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Large"
                  RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-200}"
-                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.07,  Constant=30}" 
+                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.0,  Constant=70}" 
                  RelativeLayout.WidthConstraint = "400" 
                  RelativeLayout.HeightConstraint = "30"/>
 
@@ -34,7 +34,7 @@
         <Button x:Name="saveButton" Text = "Save" BackgroundColor="#673AB7" TextColor="White" BorderRadius="8"  BorderWidth="1" 
                     Clicked="saveButton_Clicked" 
                  RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-60}"
-                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.60,  Constant=0}" 
+                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.50,  Constant=80}" 
                  RelativeLayout.WidthConstraint = "120" 
                  RelativeLayout.HeightConstraint = "50" />        
     </RelativeLayout>

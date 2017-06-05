@@ -12,16 +12,17 @@ namespace EngishTime.Pages.MainMenu
             InitializeComponent();
         }
 
-        private void writeTheWordButton_Clicked(object sender, System.EventArgs e)
+        private async void writeTheWordButton_Clicked(object sender, System.EventArgs e)
         {
-            Navigation.PopAsync(true);
-
+            await Navigation.PushAsync(new EngishTime.Pages.WriteTheWord.WriteTheWord(), true);
         }
+        
 
-        private void guessTheWordButton_Clicked(object sender, System.EventArgs e)
+        private async void guessTheWordButton_Clicked(object sender, System.EventArgs e)
         {
-            Navigation.PopAsync(true);
+            await Navigation.PushAsync(new EngishTime.Pages.GuessTheWord.GuessTheWord(), true);
         }
+        
 
         private async void newWordButton_Clicked(object sender, System.EventArgs e)
         {

@@ -15,10 +15,7 @@ namespace EngishTime
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new EngishTime.Pages.Login.Login())
-            {
-                BarBackgroundColor = Color.FromHex("#673AB7")
-            };
+            MainPage = new EngishTime.Pages.Login.Login();
         }
 
         protected override void OnStart()

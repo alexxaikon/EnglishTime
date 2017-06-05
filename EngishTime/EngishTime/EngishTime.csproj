@@ -42,6 +42,9 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\GuessTheWord\GuessTheWord.xaml.cs">
+      <DependentUpon>GuessTheWord.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Login\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -50,6 +53,9 @@
     </Compile>
     <Compile Include="Pages\NewWord\NewWord.xaml.cs">
       <DependentUpon>NewWord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WriteTheWord\WriteTheWord.xaml.cs">
+      <DependentUpon>WriteTheWord.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -105,6 +111,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\NewWord\NewWord.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\WriteTheWord\WriteTheWord.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\GuessTheWord\GuessTheWord.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

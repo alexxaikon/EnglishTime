@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngishTime.Pages.WriteTheWord.WriteTheWord"
+             Title="CarouselPage">
+  <ContentPage>
+        <RelativeLayout BackgroundColor="White">
+
+            <Label Text="Write the correct meaning" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Large"
+                 RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-200}"
+                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.0,  Constant=40}" 
+                 RelativeLayout.WidthConstraint = "400" 
+                 RelativeLayout.HeightConstraint = "30"/>
+
+            <Label Text="Dinner" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Medium"
+                 RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-200}"
+                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3,  Constant=0}" 
+                 RelativeLayout.WidthConstraint = "400" 
+                 RelativeLayout.HeightConstraint = "30"/>
+
+            <Entry x:Name="checkWordEntry" HeightRequest="50" WidthRequest="100" Text="" Placeholder="New Word" TextColor="#673AB7" PlaceholderColor="#9575CD"
+                 RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-140}"
+                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5,  Constant=0}" 
+                 RelativeLayout.WidthConstraint = "280" 
+                 RelativeLayout.HeightConstraint = "50"
+                   />
+
+            <Button x:Name="checkButton" Text = "Save" BackgroundColor="#673AB7" TextColor="White" BorderRadius="8"  BorderWidth="1" 
+                 RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-60}"
+                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5,  Constant=80}" 
+                 RelativeLayout.WidthConstraint = "120" 
+                 RelativeLayout.HeightConstraint = "50" />
+            
+            
+        </RelativeLayout>
+    </ContentPage>
+</CarouselPage>
