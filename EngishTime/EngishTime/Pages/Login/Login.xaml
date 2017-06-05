@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EngishTime.Infrastructure;assembly=EngishTime"
+             x:Class="EngishTime.Pages.Login.Login">
+
+    <RelativeLayout BackgroundColor="White">
+        <Image Source="{local:ImageResource EngishTime.Resources.Images.logo.png}" BackgroundColor="White"
+             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-100}"
+             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.15,  Constant=0}" 
+             RelativeLayout.WidthConstraint = "200" 
+             RelativeLayout.HeightConstraint = "70" />
+
+        <Entry x:Name="LoginEntry" HeightRequest="50" WidthRequest="100" Text="dsadsrrad" Placeholder="dsadasdasdsada" TextColor="#673AB7"
+             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-140}"
+             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.45,  Constant=0}" 
+             RelativeLayout.WidthConstraint = "280" 
+             RelativeLayout.HeightConstraint = "50"
+               />
+
+        <Entry x:Name="PasswordEntry" HeightRequest="50" WidthRequest="100" Text="dsadsrrad" Placeholder="dsadasdasdsada" TextColor="#673AB7"
+             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-140}"
+             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.45,  Constant=50}" 
+             RelativeLayout.WidthConstraint = "280" 
+             RelativeLayout.HeightConstraint = "50"
+               />
+
+        <Button x:Name="signInButton" Text = "Sign In" BackgroundColor="#673AB7" TextColor="White" BorderRadius="8"  BorderWidth="1" 
+                Clicked="signInButton_Clicked" 
+             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-60}"
+             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.75,  Constant=0}" 
+             RelativeLayout.WidthConstraint = "120" 
+             RelativeLayout.HeightConstraint = "60" />
+    </RelativeLayout>
+
+</ContentPage>
