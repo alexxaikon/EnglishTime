@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngishTime.Pages.Vocabulary.Vocabulary">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="phones" Type="{x:Type x:String}">
+                <x:String>Hello</x:String>
+                <x:String>Name</x:String>
+                <x:String>Man</x:String>
+                <x:String>Text</x:String>
+                <x:String>Button</x:String>
+                <x:String>Content</x:String>
+                <x:String>Cat</x:String>
+                <x:String>Dog</x:String>
+                <x:String>Boy</x:String>
+                <x:String>Stop</x:String>
+                <x:String>Phone</x:String>
+                <x:String>Hello</x:String>
+                <x:String>Name</x:String>
+                <x:String>Man</x:String>
+                <x:String>Text</x:String>
+                <x:String>Button</x:String>
+                <x:String>Content</x:String>
+                <x:String>Cat</x:String>
+                <x:String>Dog</x:String>
+                <x:String>Boy</x:String>
+                <x:String>Stop</x:String>
+                <x:String>Phone</x:String>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout BackgroundColor="White">
+        <StackLayout BackgroundColor="#EDE7F6">
+            <AbsoluteLayout Padding="0,10,0,0">
+                <Button BackgroundColor="Transparent" TextColor="#673AB7" Text="English" AbsoluteLayout.LayoutBounds=".2, 1, 120, 40"
+        AbsoluteLayout.LayoutFlags="PositionProportional" />
+                <Button BackgroundColor="Transparent" TextColor="#673AB7" Text="Russian" AbsoluteLayout.LayoutBounds=".8, 1, 120, 40"
+        AbsoluteLayout.LayoutFlags="PositionProportional" />
+            </AbsoluteLayout>
+            <AbsoluteLayout>
+                <Entry x:Name="PasswordEntry" Text="" Placeholder="Enter new word" TextColor="#673AB7" PlaceholderColor="#673AB7"
+AbsoluteLayout.LayoutBounds=".25, 0.5, 0.9, 1"
+        AbsoluteLayout.LayoutFlags="All"
+               />
+            </AbsoluteLayout>
+        </StackLayout>
+        <ListView x:Name="phonesList" ItemsSource="{StaticResource Key=phones}" >
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

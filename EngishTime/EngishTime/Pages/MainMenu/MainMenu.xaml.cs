@@ -29,9 +29,9 @@ namespace EngishTime.Pages.MainMenu
             await Navigation.PushAsync(new EngishTime.Pages.NewWord.NewWord(), true);
         }
 
-        private void vocabularyButton_Clicked(object sender, System.EventArgs e)
+        private async void vocabularyButton_Clicked(object sender, System.EventArgs e)
         {
-
+            await Navigation.PushAsync(new EngishTime.Pages.Vocabulary.Vocabulary(), true);
         }
     }
 }

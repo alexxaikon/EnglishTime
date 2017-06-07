@@ -54,6 +54,9 @@
     <Compile Include="Pages\NewWord\NewWord.xaml.cs">
       <DependentUpon>NewWord.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Vocabulary\Vocabulary.xaml.cs">
+      <DependentUpon>Vocabulary.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\WriteTheWord\WriteTheWord.xaml.cs">
       <DependentUpon>WriteTheWord.xaml</DependentUpon>
     </Compile>
@@ -91,7 +94,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
-    <Folder Include="Pages\Vocabulary\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Images\logo.png" />
@@ -123,6 +125,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\GuessTheWord\GuessTheWord.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Vocabulary\Vocabulary.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
