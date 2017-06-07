@@ -2,37 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:EngishTime.Infrastructure;assembly=EngishTime"
+             xmlns:ctrl="clr-namespace:EngishTime.Controls;assembly=EngishTime"
              x:Class="EngishTime.Pages.MainMenu.MainMenu"
              Title="Menu">
+    
 
+
+<!--
+-->
+    <AbsoluteLayout>
+        <Button  BackgroundColor="#EDE7F6" Text="Hello" AbsoluteLayout.LayoutBounds=".25, .25, 80, 80"
+        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <ctrl:XButton x:Name="VocabularyXButton" XImageSource="writeText.png"  AbsoluteLayout.LayoutBounds=".5, .5, 80, 80" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+    </AbsoluteLayout>
+
+   
+    
+    
+    
+    <!--
     <RelativeLayout BackgroundColor="White">
-
-        <Button  BackgroundColor="#EDE7F6" TextColor="#673AB7" BorderRadius="65"  BorderWidth="1" 
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25, Constant=-50}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.25,  Constant=0}" 
-             RelativeLayout.WidthConstraint = "100" 
-             RelativeLayout.HeightConstraint = "100" />
-
-        <Image  Source="plus.png"
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25, Constant=-30}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.25,  Constant=20}" 
-             RelativeLayout.WidthConstraint = "60" 
-             RelativeLayout.HeightConstraint = "60" />
-
-        <Button x:Name="newWordButton" BackgroundColor="Transparent" BorderRadius="65"  BorderWidth="1"  Clicked="newWordButton_Clicked"
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25, Constant=-50}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.25,  Constant=0}" 
-             RelativeLayout.WidthConstraint = "100" 
-             RelativeLayout.HeightConstraint = "100" />
-
-        <Label Text="New Word" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Medium"
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToView, ElementName=newWordButton, Property=X, Factor=1, Constant=-50}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToView, ElementName=newWordButton, Property=Y, Factor=1, Constant=105}" 
-             RelativeLayout.WidthConstraint = "200" 
-             RelativeLayout.HeightConstraint = "30"/>
-
-        <!---->
-
+        
+ <Label Text="New Word" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Medium"/>
         <Button BackgroundColor="#EDE7F6" BorderRadius="65"  BorderWidth="1"
              RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.75, Constant=-50}"
              RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.25,  Constant=0}" 
@@ -57,7 +48,7 @@
              RelativeLayout.WidthConstraint = "200" 
              RelativeLayout.HeightConstraint = "30"/>
 
-        <!---->
+        
 
         <Button  BackgroundColor="#EDE7F6"  BorderRadius="65"  BorderWidth="1" 
              RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25, Constant=-50}"
@@ -83,7 +74,7 @@
              RelativeLayout.WidthConstraint = "200" 
              RelativeLayout.HeightConstraint = "30"/>
 
-        <!---->
+        
 
         <Button BackgroundColor="#EDE7F6" BorderRadius="65"  BorderWidth="1" 
              RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.75, Constant=-50}"
@@ -110,5 +101,5 @@
              RelativeLayout.HeightConstraint = "30"/>
 
     </RelativeLayout>
-
+-->
 </ContentPage>
