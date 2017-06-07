@@ -13,7 +13,7 @@ namespace EngishTime.Controls
         public XButton()
         {
             InitializeComponent();
-            //ImageForButton.Source = XImageSource;
+            ImageForButton.Source = XImageSource;
         }
 
         public EventHandler XClick { get; set; }
