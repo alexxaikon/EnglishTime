@@ -5,101 +5,27 @@
              xmlns:ctrl="clr-namespace:EngishTime.Controls;assembly=EngishTime"
              x:Class="EngishTime.Pages.MainMenu.MainMenu"
              Title="Menu">
-    
 
-
-<!--
--->
     <AbsoluteLayout>
-        <Button  BackgroundColor="#EDE7F6" Text="Hello" AbsoluteLayout.LayoutBounds=".25, .25, 80, 80"
-        AbsoluteLayout.LayoutFlags="PositionProportional"/>
-        <ctrl:XButton x:Name="VocabularyXButton" XImageSource="writeText.png"  AbsoluteLayout.LayoutBounds=".5, .5, 80, 80" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <StackLayout Spacing="8" AbsoluteLayout.LayoutBounds=".85, .75, 120, 105" AbsoluteLayout.LayoutFlags="PositionProportional">
+            <ctrl:XButton x:Name="WriteTheWordXButton" XImageSource="writeText.png" HorizontalOptions="Center"/>
+            <Label Text="Write the Word" TextColor ="#673AB7" FontSize="Medium" BackgroundColor="Transparent" HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <StackLayout Spacing="8" AbsoluteLayout.LayoutBounds=".15, .25, 120, 105" AbsoluteLayout.LayoutFlags="PositionProportional">
+            <ctrl:XButton x:Name="NewWordXButton" XImageSource="plus.png"  HorizontalOptions="Center"/>
+            <Label Text="New Word" TextColor ="#673AB7" FontSize="Medium" BackgroundColor="Transparent" HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <StackLayout Spacing="8" AbsoluteLayout.LayoutBounds=".15, .75, 120, 105" AbsoluteLayout.LayoutFlags="PositionProportional">
+            <ctrl:XButton x:Name="GuessTheWordXButton" XImageSource="guess.png"  HorizontalOptions="Center"/>
+            <Label Text="Vocabulary" TextColor ="#673AB7" FontSize="Medium" BackgroundColor="Transparent" HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <StackLayout Spacing="8" AbsoluteLayout.LayoutBounds=".85, .25, 120, 105" AbsoluteLayout.LayoutFlags="PositionProportional">
+            <ctrl:XButton x:Name="VocabularyXButton" XImageSource="list2.png" HorizontalOptions="Center"/>
+            <Label Text="Vocabulary" TextColor ="#673AB7" FontSize="Medium" BackgroundColor="Transparent" HorizontalOptions="Center"/>
+        </StackLayout>
     </AbsoluteLayout>
-
-   
     
-    
-    
-    <!--
-    <RelativeLayout BackgroundColor="White">
-        
- <Label Text="New Word" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Medium"/>
-        <Button BackgroundColor="#EDE7F6" BorderRadius="65"  BorderWidth="1"
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.75, Constant=-50}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.25,  Constant=0}" 
-             RelativeLayout.WidthConstraint = "100" 
-             RelativeLayout.HeightConstraint = "100" />
-
-        <Image Source="list2.png"
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.75, Constant=-25}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.25,  Constant=25}" 
-             RelativeLayout.WidthConstraint = "50" 
-             RelativeLayout.HeightConstraint = "50" />
-
-        <Button x:Name="vocabularyButton" BackgroundColor="Transparent" TextColor="#673AB7" BorderRadius="65"  BorderWidth="1" Clicked="vocabularyButton_Clicked"
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.75, Constant=-50}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.25,  Constant=0}" 
-             RelativeLayout.WidthConstraint = "100" 
-             RelativeLayout.HeightConstraint = "100" />
-        
-        <Label Text="Vocabulary" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Medium"
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToView, ElementName=vocabularyButton, Property=X, Factor=1, Constant=-50}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToView, ElementName=vocabularyButton, Property=Y, Factor=1, Constant=105}" 
-             RelativeLayout.WidthConstraint = "200" 
-             RelativeLayout.HeightConstraint = "30"/>
-
-        
-
-        <Button  BackgroundColor="#EDE7F6"  BorderRadius="65"  BorderWidth="1" 
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25, Constant=-50}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.55,  Constant=0}" 
-             RelativeLayout.WidthConstraint = "100" 
-             RelativeLayout.HeightConstraint = "100"/>
-
-        <Image Source="guess.png"
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25, Constant=-25}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.55,  Constant=25}" 
-             RelativeLayout.WidthConstraint = "50" 
-             RelativeLayout.HeightConstraint = "50"/>
-
-        <Button x:Name="guessTheWordButton" BackgroundColor="Transparent" TextColor="#673AB7" BorderRadius="65"  BorderWidth="1" Clicked="guessTheWordButton_Clicked"
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25, Constant=-50}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.55,  Constant=0}" 
-             RelativeLayout.WidthConstraint = "100" 
-             RelativeLayout.HeightConstraint = "100"/>
-
-        <Label Text="Guess the Word" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Medium"
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToView, ElementName=guessTheWordButton, Property=X, Factor=1, Constant=-50}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToView, ElementName=guessTheWordButton, Property=Y, Factor=1, Constant=105}" 
-             RelativeLayout.WidthConstraint = "200" 
-             RelativeLayout.HeightConstraint = "30"/>
-
-        
-
-        <Button BackgroundColor="#EDE7F6" BorderRadius="65"  BorderWidth="1" 
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.75, Constant=-50}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.55,  Constant=0}" 
-             RelativeLayout.WidthConstraint = "100" 
-             RelativeLayout.HeightConstraint = "100" />
-
-        <Image Source="writeText.png"
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.75, Constant=-25}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.55,  Constant=25}" 
-             RelativeLayout.WidthConstraint = "50" 
-             RelativeLayout.HeightConstraint = "50" />
-
-        <Button x:Name="writeTheWordButton" BackgroundColor="Transparent" TextColor="#673AB7" BorderRadius="65"  BorderWidth="1" Clicked="writeTheWordButton_Clicked"
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.75, Constant=-50}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.55,  Constant=0}" 
-             RelativeLayout.WidthConstraint = "100" 
-             RelativeLayout.HeightConstraint = "100" />
-
-        <Label Text="Write the Word" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Medium"
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToView, ElementName=writeTheWordButton, Property=X, Factor=1, Constant=-50}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToView, ElementName=writeTheWordButton, Property=Y, Factor=1, Constant=105}" 
-             RelativeLayout.WidthConstraint = "200" 
-             RelativeLayout.HeightConstraint = "30"/>
-
-    </RelativeLayout>
--->
 </ContentPage>

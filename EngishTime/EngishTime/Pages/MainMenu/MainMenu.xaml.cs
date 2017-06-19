@@ -10,6 +10,9 @@ namespace EngishTime.Pages.MainMenu
         public MainMenu()
         {
             InitializeComponent();
+            WriteTheWordXButton.XClick += writeTheWordButton_Clicked;
+            NewWordXButton.XClick += newWordButton_Clicked;
+            GuessTheWordXButton.XClick += guessTheWordButton_Clicked;
             VocabularyXButton.XClick += vocabularyButton_Clicked;
         }
 
@@ -26,11 +29,11 @@ namespace EngishTime.Pages.MainMenu
             await Navigation.PushAsync(new EngishTime.Pages.GuessTheWord.GuessTheWord(), true);
         }
         
-        /*
+        
         private async void newWordButton_Clicked(object sender, System.EventArgs e)
         {
             await Navigation.PushAsync(new EngishTime.Pages.NewWord.NewWord(), true);
-        }*/
+        }
 
         private async void vocabularyButton_Clicked(object sender, System.EventArgs e)
         {
