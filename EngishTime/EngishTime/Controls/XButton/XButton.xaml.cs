@@ -13,7 +13,7 @@ namespace EngishTime.Controls
         public XButton()
         {
             InitializeComponent();
-            ImageForButton.Source = XImageSource;
+           //ImageForButton.Source = XImageSource;
         }
 
         public EventHandler XClick { get; set; }
@@ -23,19 +23,27 @@ namespace EngishTime.Controls
         typeof(string), // возвращаемый тип 
         typeof(XButton), // тип,  котором объявляется свойство
         "",// значение по умолчанию
-        defaultBindingMode:BindingMode.TwoWay
+        defaultBindingMode:BindingMode.TwoWay,
+        propertyChanged: titleTextPropertyChanged
     );
         public string XImageSource
         {
             set
             {
                 SetValue(XImageSourceProperty, value);
+                ImageForButton.Source = value;
             }
             get
             {
-                var t = (string)GetValue(XImageSourceProperty);
                 return (string)GetValue(XImageSourceProperty);
             }
+        }
+
+        private static void titleTextPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            var control = (XButton)bindable;
+            var t = newValue.ToString();
+            control.XImageSource = t;
         }
 
         private void ButtonClick(object sender, EventArgs e)
