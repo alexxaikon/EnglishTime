@@ -4,34 +4,17 @@
              x:Class="EngishTime.Pages.WriteTheWord.WriteTheWord"
              Title="CarouselPage">
   <ContentPage>
-        <RelativeLayout BackgroundColor="White">
 
-            <Label Text="Write the correct meaning" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Large"
-                 RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-200}"
-                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.0,  Constant=40}" 
-                 RelativeLayout.WidthConstraint = "400" 
-                 RelativeLayout.HeightConstraint = "30"/>
+        <AbsoluteLayout>
+            <Label Text="Write the correct meaning" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Medium" AbsoluteLayout.LayoutBounds=".5, .035" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <Label Text="Dinner" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Large" AbsoluteLayout.LayoutBounds=".5, .25" AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
-            <Label Text="Dinner" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Medium"
-                 RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-200}"
-                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3,  Constant=0}" 
-                 RelativeLayout.WidthConstraint = "400" 
-                 RelativeLayout.HeightConstraint = "30"/>
+            <StackLayout Spacing="8" AbsoluteLayout.LayoutBounds=".5, .6" AbsoluteLayout.LayoutFlags="PositionProportional">
+                <Entry x:Name="checkWordEntry" HeightRequest="50" WidthRequest="200" Text="" Placeholder="New Word" TextColor="#673AB7" PlaceholderColor="#9575CD"/>
+                <BoxView BackgroundColor="Transparent" HeightRequest="40"/>
+                <Button x:Name="checkButton" Text = "Save" BackgroundColor="#673AB7" TextColor="White" BorderRadius="8"  BorderWidth="1" HeightRequest="40" WidthRequest="180" HorizontalOptions="Center"/>
+            </StackLayout>
+        </AbsoluteLayout>
 
-            <Entry x:Name="checkWordEntry" HeightRequest="50" WidthRequest="100" Text="" Placeholder="New Word" TextColor="#673AB7" PlaceholderColor="#9575CD"
-                 RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-140}"
-                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5,  Constant=0}" 
-                 RelativeLayout.WidthConstraint = "280" 
-                 RelativeLayout.HeightConstraint = "50"
-                   />
-
-            <Button x:Name="checkButton" Text = "Save" BackgroundColor="#673AB7" TextColor="White" BorderRadius="8"  BorderWidth="1" 
-                 RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-60}"
-                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5,  Constant=80}" 
-                 RelativeLayout.WidthConstraint = "120" 
-                 RelativeLayout.HeightConstraint = "50" />
-            
-            
-        </RelativeLayout>
     </ContentPage>
 </CarouselPage>
