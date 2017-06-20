@@ -4,33 +4,18 @@
              xmlns:local="clr-namespace:EngishTime.Infrastructure;assembly=EngishTime"
              x:Class="EngishTime.Pages.Login.Login">
 
-    <RelativeLayout BackgroundColor="White">
-        <Image Source="{local:ImageResource EngishTime.Resources.Images.logo.png}" BackgroundColor="White"
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-100}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.15,  Constant=0}" 
-             RelativeLayout.WidthConstraint = "200" 
-             RelativeLayout.HeightConstraint = "70" />
 
-        <Entry x:Name="LoginEntry" HeightRequest="50" WidthRequest="100" Text="dsadsrrad" Placeholder="dsadasdasdsada" TextColor="#673AB7"
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-140}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.45,  Constant=0}" 
-             RelativeLayout.WidthConstraint = "280" 
-             RelativeLayout.HeightConstraint = "50"
-               />
+    <AbsoluteLayout>
+        <StackLayout Spacing="10" AbsoluteLayout.LayoutBounds=".5, .5" AbsoluteLayout.LayoutFlags="PositionProportional" >
+            <Image Source="{local:ImageResource EngishTime.Resources.Images.logo.png}"  HeightRequest="70" WidthRequest="200"/>
+            <BoxView BackgroundColor="Transparent" HeightRequest="70"/>
+            <Entry x:Name="LoginEntry" HeightRequest="50" WidthRequest="100" Text="dsadsrrad" Placeholder="dsadasdasdsada" TextColor="#673AB7" />
+            <Entry x:Name="PasswordEntry" HeightRequest="50" WidthRequest="100" Text="dsadsrrad" Placeholder="dsadasdasdsada" TextColor="#673AB7" />
+            <BoxView BackgroundColor="Transparent" HeightRequest="40"/>
+            <Button x:Name="signInButton" Text = "Sign In" BackgroundColor="#673AB7" TextColor="White" BorderRadius="8"  BorderWidth="1" HorizontalOptions="Center"
+                Clicked="signInButton_Clicked" HeightRequest="60" WidthRequest="120"/>
+        </StackLayout>
 
-        <Entry x:Name="PasswordEntry" HeightRequest="50" WidthRequest="100" Text="dsadsrrad" Placeholder="dsadasdasdsada" TextColor="#673AB7"
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-140}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.45,  Constant=50}" 
-             RelativeLayout.WidthConstraint = "280" 
-             RelativeLayout.HeightConstraint = "50"
-               />
-
-        <Button x:Name="signInButton" Text = "Sign In" BackgroundColor="#673AB7" TextColor="White" BorderRadius="8"  BorderWidth="1" 
-                Clicked="signInButton_Clicked" 
-             RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-60}"
-             RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.75,  Constant=0}" 
-             RelativeLayout.WidthConstraint = "120" 
-             RelativeLayout.HeightConstraint = "60" />
-    </RelativeLayout>
+    </AbsoluteLayout>
 
 </ContentPage>
