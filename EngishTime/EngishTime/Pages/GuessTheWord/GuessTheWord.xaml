@@ -3,44 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EngishTime.Pages.GuessTheWord.GuessTheWord">
 
-    <RelativeLayout BackgroundColor="White">
 
-        <Label Text="Write the correct meaning" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Medium"
-                 RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-200}"
-                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.0,  Constant=20}" 
-                 RelativeLayout.WidthConstraint = "400" 
-                 RelativeLayout.HeightConstraint = "30"/>
 
-        <Label Text="Dinner" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Large"
-                 RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-200}"
-                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.25,  Constant=-10}" 
-                 RelativeLayout.WidthConstraint = "400" 
-                 RelativeLayout.HeightConstraint = "30"/>
+    <AbsoluteLayout>
+        <Label Text="Write the correct meaning" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Medium" AbsoluteLayout.LayoutBounds=".5, .035" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <Label Text="Dinner" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Large" AbsoluteLayout.LayoutBounds=".5, .25" AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
-        <Button x:Name="checkAButton" Text = "Завтрак" BackgroundColor="White" BorderRadius="8"  BorderWidth="1" BorderColor="#673AB7" TextColor="#673AB7"
-                 RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25, Constant=-45}"
-                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5,  Constant=-20}" 
-                 RelativeLayout.WidthConstraint = "110" 
-                 RelativeLayout.HeightConstraint = "110" />
+        <StackLayout Spacing="30" AbsoluteLayout.LayoutBounds=".5, .85" AbsoluteLayout.LayoutFlags="PositionProportional">
+            <StackLayout Spacing="30" Orientation="Horizontal">
+                <Button x:Name="checkAButton" Text = "Завтрак" BackgroundColor="White" BorderRadius="8"  BorderWidth="1" BorderColor="#673AB7" TextColor="#673AB7" HeightRequest="110" WidthRequest="110" />
+                <Button x:Name="checkBButton" Text = "Обед" BackgroundColor="White" BorderRadius="8"  BorderWidth="1" BorderColor="#673AB7" TextColor="#673AB7" HeightRequest="110" WidthRequest="110" />
+            </StackLayout>
+            <StackLayout Spacing="30" Orientation="Horizontal">
+                <Button x:Name="checkCButton" Text = "Еда" BackgroundColor="White" BorderRadius="8"  BorderWidth="1" BorderColor="#673AB7" TextColor="#673AB7" HeightRequest="110" WidthRequest="110" />
+                <Button x:Name="checkDButton" Text = "Суп" BackgroundColor="White" BorderRadius="8"  BorderWidth="1" BorderColor="#673AB7" TextColor="#673AB7" HeightRequest="110" WidthRequest="110" />
+            </StackLayout>
+      </StackLayout>
+    </AbsoluteLayout>
 
-        <Button x:Name="checkBButton" Text = "Обед" BackgroundColor="White" BorderRadius="8"  BorderWidth="1" BorderColor="#673AB7" TextColor="#673AB7"
-                 RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.75, Constant=-75}"
-                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5,  Constant=-20}" 
-                 RelativeLayout.WidthConstraint = "110" 
-                 RelativeLayout.HeightConstraint = "110" />
 
-        <Button x:Name="checkCButton" Text = "Еда" BackgroundColor="White" BorderRadius="8"  BorderWidth="1" BorderColor="#673AB7" TextColor="#673AB7"
-                 RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25, Constant=-45}"
-                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5,  Constant=120}" 
-                 RelativeLayout.WidthConstraint = "110" 
-                 RelativeLayout.HeightConstraint = "110" />
-
-        <Button x:Name="checkDButton" Text = "Суп" BackgroundColor="White" BorderRadius="8"  BorderWidth="1" BorderColor="#673AB7" TextColor="#673AB7"
-                 RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.75, Constant=-75}"
-                 RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5,  Constant=120}" 
-                 RelativeLayout.WidthConstraint = "110" 
-                 RelativeLayout.HeightConstraint = "110" />
-
-    </RelativeLayout>
 
 </ContentPage>
