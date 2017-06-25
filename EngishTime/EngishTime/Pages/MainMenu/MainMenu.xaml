@@ -19,7 +19,7 @@
 
         <StackLayout Spacing="8" AbsoluteLayout.LayoutBounds=".15, .75, 120, 105" AbsoluteLayout.LayoutFlags="PositionProportional">
             <ctrl:XButton x:Name="GuessTheWordXButton" XImageSource="guess.png"  HorizontalOptions="Center"/>
-            <Label Text="Vocabulary" TextColor ="#673AB7" FontSize="Medium" BackgroundColor="Transparent" HorizontalOptions="Center"/>
+            <Label Text="Guess the word" TextColor ="#673AB7" FontSize="Medium" BackgroundColor="Transparent" HorizontalOptions="Center"/>
         </StackLayout>
 
         <StackLayout Spacing="8" AbsoluteLayout.LayoutBounds=".85, .25, 120, 105" AbsoluteLayout.LayoutFlags="PositionProportional">

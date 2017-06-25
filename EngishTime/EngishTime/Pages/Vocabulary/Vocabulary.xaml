@@ -3,35 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EngishTime.Pages.Vocabulary.Vocabulary">
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <x:Array x:Key="phones" Type="{x:Type x:String}">
-                <x:String>Hello</x:String>
-                <x:String>Name</x:String>
-                <x:String>Man</x:String>
-                <x:String>Text</x:String>
-                <x:String>Button</x:String>
-                <x:String>Content</x:String>
-                <x:String>Cat</x:String>
-                <x:String>Dog</x:String>
-                <x:String>Boy</x:String>
-                <x:String>Stop</x:String>
-                <x:String>Phone</x:String>
-                <x:String>Hello</x:String>
-                <x:String>Name</x:String>
-                <x:String>Man</x:String>
-                <x:String>Text</x:String>
-                <x:String>Button</x:String>
-                <x:String>Content</x:String>
-                <x:String>Cat</x:String>
-                <x:String>Dog</x:String>
-                <x:String>Boy</x:String>
-                <x:String>Stop</x:String>
-                <x:String>Phone</x:String>
-            </x:Array>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
     <StackLayout BackgroundColor="White">
         <StackLayout BackgroundColor="#EDE7F6">
             <AbsoluteLayout Padding="0,10,0,0">
@@ -47,7 +18,19 @@ AbsoluteLayout.LayoutBounds=".25, 0.5, 0.9, 1"
                />
             </AbsoluteLayout>
         </StackLayout>
-        <ListView x:Name="phonesList" ItemsSource="{StaticResource Key=phones}" >
+        <ListView x:Name="wordList" RowHeight="55"  ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <ViewCell >
+                        <ViewCell.View>
+                            <StackLayout>
+                                <Label Text="{Binding En}" FontSize="Medium" />
+                                <Label Text="{Binding Ru}" FontSize="Small"/>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
 

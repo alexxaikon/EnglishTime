@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EngishTime.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,19 @@ namespace EngishTime
 {
     public partial class App : Application
     {
+        public const string DATABASE_NAME = "EnglishTime.db";
+        public static WordRepository database;
+        public static WordRepository Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new WordRepository(DATABASE_NAME);
+                }
+                return database;
+            }
+        }
         public App()
         {
             InitializeComponent();

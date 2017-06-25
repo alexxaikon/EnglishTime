@@ -7,7 +7,7 @@
 
     <AbsoluteLayout>
         <Label Text="Write the correct meaning" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Medium" AbsoluteLayout.LayoutBounds=".5, .035" AbsoluteLayout.LayoutFlags="PositionProportional"/>
-        <Label Text="Dinner" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Large" AbsoluteLayout.LayoutBounds=".5, .25" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <Label x:Name="checkWord" Text="Dinner" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Large" AbsoluteLayout.LayoutBounds=".5, .25" AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
         <StackLayout Spacing="30" AbsoluteLayout.LayoutBounds=".5, .85" AbsoluteLayout.LayoutFlags="PositionProportional">
             <StackLayout Spacing="30" Orientation="Horizontal">

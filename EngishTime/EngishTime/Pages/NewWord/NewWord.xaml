@@ -10,11 +10,12 @@
             <Label Text="own vocabulary" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Large"/>
         </StackLayout>
 
-        <StackLayout Spacing="8" AbsoluteLayout.LayoutBounds=".5, .6" AbsoluteLayout.LayoutFlags="PositionProportional">
-            <Entry x:Name="NewWordEntry" HeightRequest="50" WidthRequest="200" Text="" Placeholder="New Word" TextColor="#673AB7" PlaceholderColor="#9575CD"/>
-            <Entry x:Name="PasswordEntry" HeightRequest="50" WidthRequest="200" Text="" Placeholder="Meaning" TextColor="#673AB7" PlaceholderColor="#9575CD" />
+        <StackLayout Spacing="8" AbsoluteLayout.LayoutBounds=".5, .6" AbsoluteLayout.LayoutFlags="PositionProportional" >
+            <Entry x:Name="EnWordEntry" HeightRequest="50" WidthRequest="200" Text="" Placeholder="New Word" TextColor="#673AB7" PlaceholderColor="#9575CD"/>
+            <Entry x:Name="RuWordEntry" HeightRequest="50" WidthRequest="200" Text="" Placeholder="Meaning" TextColor="#673AB7" PlaceholderColor="#9575CD" />
             <BoxView BackgroundColor="Transparent" HeightRequest="40"/>
-            <Button x:Name="saveButton" Text = "Save" BackgroundColor="#673AB7" TextColor="White" BorderRadius="8"  BorderWidth="1" HeightRequest="40" WidthRequest="180" HorizontalOptions="Center"/>
+            <Button x:Name="saveButton" Text = "Save" Clicked="saveButton_Clicked" BackgroundColor="#673AB7" TextColor="White" BorderRadius="8"  BorderWidth="1" HeightRequest="40" WidthRequest="180" HorizontalOptions="Center"/>
+            <Button x:Name="deleteButton" Text = "Delete" Clicked="deleteButton_Clicked" BackgroundColor="#673AB7" TextColor="White" BorderRadius="8"  BorderWidth="1" HeightRequest="40" WidthRequest="180" HorizontalOptions="Center" />
         </StackLayout>
     </AbsoluteLayout>
 
