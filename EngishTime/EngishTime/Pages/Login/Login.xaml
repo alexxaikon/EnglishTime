@@ -9,8 +9,8 @@
         <StackLayout Spacing="10" AbsoluteLayout.LayoutBounds=".5, .5" AbsoluteLayout.LayoutFlags="PositionProportional" >
             <Image Source="{local:ImageResource EngishTime.Resources.Images.logo.png}"  HeightRequest="70" WidthRequest="200"/>
             <BoxView BackgroundColor="Transparent" HeightRequest="70"/>
-            <Entry x:Name="LoginEntry" HeightRequest="50" WidthRequest="100" Text="dsadsrrad" Placeholder="dsadasdasdsada" TextColor="#673AB7" />
-            <Entry x:Name="PasswordEntry" HeightRequest="50" WidthRequest="100" Text="dsadsrrad" Placeholder="dsadasdasdsada" TextColor="#673AB7" />
+            <Entry x:Name="LoginEntry" HeightRequest="50" WidthRequest="100" Text="" Placeholder="Enter your login" TextColor="#673AB7" />
+            <Entry x:Name="PasswordEntry" HeightRequest="50" WidthRequest="100" Text="" Placeholder="Enter your password" TextColor="#673AB7" />
             <BoxView BackgroundColor="Transparent" HeightRequest="40"/>
             <Button x:Name="signInButton" Text = "Sign In" BackgroundColor="#673AB7" TextColor="White" BorderRadius="8"  BorderWidth="1" HorizontalOptions="Center"
                 Clicked="signInButton_Clicked" HeightRequest="60" WidthRequest="120"/>

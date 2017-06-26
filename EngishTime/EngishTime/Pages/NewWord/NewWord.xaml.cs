@@ -53,7 +53,15 @@ namespace EngishTime.Pages.NewWord
                     RuWordEntry.Text = "";
                     if(_existingWord == null)
                     {
-                        await Navigation.PushAsync(new EngishTime.Pages.Vocabulary.Vocabulary(), true);
+                        saveButton.IsEnabled = false;
+                        EnWordEntry.IsEnabled = false;
+                        RuWordEntry.IsEnabled = false;
+                        SaveAlert.IsVisible = true;
+                        await Task.Delay(2000);
+                        saveButton.IsEnabled = true;
+                        EnWordEntry.IsEnabled = true;
+                        RuWordEntry.IsEnabled = true;
+                        SaveAlert.IsVisible = false;
                     }
                     else
                     {

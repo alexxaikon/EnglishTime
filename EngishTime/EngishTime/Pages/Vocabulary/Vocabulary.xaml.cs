@@ -13,6 +13,8 @@ namespace EngishTime.Pages.Vocabulary
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Vocabulary : ContentPage
     {
+        private List<Word> _words;
+
         public Vocabulary()
         {
             InitializeComponent();
@@ -20,8 +22,8 @@ namespace EngishTime.Pages.Vocabulary
 
         protected override void OnAppearing()
         {
-            List<Word> words = App.Database.GetItems().ToList();
-            wordList.ItemsSource = words;
+            _words = App.Database.GetItems().ToList();
+            Populate();
             base.OnAppearing();
         }
 
@@ -29,6 +31,31 @@ namespace EngishTime.Pages.Vocabulary
         {
             Word selectedItem = ((Word)((ListView)sender).SelectedItem);
             await Navigation.PushAsync(new EngishTime.Pages.NewWord.NewWord(selectedItem), true);
+        }
+
+        private void FindEntry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Populate();
+        }
+
+        private void Populate()
+        {
+            List<Word> filtredWords = new List<Word>();
+            if(!string.IsNullOrEmpty(FindEntry.Text))
+            {
+                foreach(var word in _words)
+                {
+                    if(word.En.ToLower().Contains(FindEntry.Text.ToLower()))
+                    {
+                        filtredWords.Add(word);
+                    }
+                }
+            }
+            else
+            {
+                filtredWords = _words;
+            }
+            wordList.ItemsSource = filtredWords;
         }
     }
 }

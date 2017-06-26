@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EngishTime.Pages.NewWord.NewWord">
+             x:Class="EngishTime.Pages.NewWord.NewWord"
+             Title="New word">
 
 
     <AbsoluteLayout>
         <StackLayout Spacing="8" AbsoluteLayout.LayoutBounds=".5, .07" AbsoluteLayout.LayoutFlags="PositionProportional">
-            <Label Text="Add new word to your" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Large"/>
-            <Label Text="own vocabulary" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Large"/>
+            <Label Text="Add new word to your" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Medium"/>
+            <Label Text="own vocabulary" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Medium"/>
         </StackLayout>
 
         <StackLayout Spacing="8" AbsoluteLayout.LayoutBounds=".5, .6" AbsoluteLayout.LayoutFlags="PositionProportional" >
@@ -17,6 +18,8 @@
             <Button x:Name="saveButton" Text = "Save" Clicked="saveButton_Clicked" BackgroundColor="#673AB7" TextColor="White" BorderRadius="8"  BorderWidth="1" HeightRequest="40" WidthRequest="180" HorizontalOptions="Center"/>
             <Button x:Name="deleteButton" Text = "Delete" Clicked="deleteButton_Clicked" BackgroundColor="#673AB7" TextColor="White" BorderRadius="8"  BorderWidth="1" HeightRequest="40" WidthRequest="180" HorizontalOptions="Center" />
         </StackLayout>
+
+        <Label x:Name="SaveAlert" Text="Word added to vacabulary" TextColor ="#673AB7" BackgroundColor="#4CAF50" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" AbsoluteLayout.LayoutBounds=".5, .02, 230, 150" AbsoluteLayout.LayoutFlags="PositionProportional" IsVisible="False"/>
     </AbsoluteLayout>
 
 

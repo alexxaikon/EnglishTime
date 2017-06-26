@@ -1,22 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EngishTime.Pages.GuessTheWord.GuessTheWord">
+             x:Class="EngishTime.Pages.GuessTheWord.GuessTheWord"
+             Title="Guess the word">
 
 
 
     <AbsoluteLayout>
         <Label Text="Write the correct meaning" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Medium" AbsoluteLayout.LayoutBounds=".5, .035" AbsoluteLayout.LayoutFlags="PositionProportional"/>
-        <Label x:Name="checkWord" Text="Dinner" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Large" AbsoluteLayout.LayoutBounds=".5, .25" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <Label x:Name="checkWord" Text="" TextColor ="#673AB7" BackgroundColor="Transparent" HorizontalTextAlignment="Center" FontSize="Large" AbsoluteLayout.LayoutBounds=".5, .25" AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
         <StackLayout Spacing="30" AbsoluteLayout.LayoutBounds=".5, .85" AbsoluteLayout.LayoutFlags="PositionProportional">
             <StackLayout Spacing="30" Orientation="Horizontal">
-                <Button x:Name="checkAButton" Text = "Завтрак" BackgroundColor="White" BorderRadius="8"  BorderWidth="1" BorderColor="#673AB7" TextColor="#673AB7" HeightRequest="110" WidthRequest="110" />
-                <Button x:Name="checkBButton" Text = "Обед" BackgroundColor="White" BorderRadius="8"  BorderWidth="1" BorderColor="#673AB7" TextColor="#673AB7" HeightRequest="110" WidthRequest="110" />
+                <Button x:Name="checkAButton" Text = "" Clicked="checkAButton_Clicked" BackgroundColor="White" BorderRadius="8"  BorderWidth="1" BorderColor="#673AB7" TextColor="#673AB7" HeightRequest="110" WidthRequest="110" />
+                <Button x:Name="checkBButton" Text = "" Clicked="checkBButton_Clicked" BackgroundColor="White" BorderRadius="8"  BorderWidth="1" BorderColor="#673AB7" TextColor="#673AB7" HeightRequest="110" WidthRequest="110" />
             </StackLayout>
             <StackLayout Spacing="30" Orientation="Horizontal">
-                <Button x:Name="checkCButton" Text = "Еда" BackgroundColor="White" BorderRadius="8"  BorderWidth="1" BorderColor="#673AB7" TextColor="#673AB7" HeightRequest="110" WidthRequest="110" />
-                <Button x:Name="checkDButton" Text = "Суп" BackgroundColor="White" BorderRadius="8"  BorderWidth="1" BorderColor="#673AB7" TextColor="#673AB7" HeightRequest="110" WidthRequest="110" />
+                <Button x:Name="checkCButton" Text = "" Clicked="checkCButton_Clicked" BackgroundColor="White" BorderRadius="8"  BorderWidth="1" BorderColor="#673AB7" TextColor="#673AB7" HeightRequest="110" WidthRequest="110" />
+                <Button x:Name="checkDButton" Text = "" Clicked="checkDButton_Clicked" BackgroundColor="White" BorderRadius="8"  BorderWidth="1" BorderColor="#673AB7" TextColor="#673AB7" HeightRequest="110" WidthRequest="110" />
             </StackLayout>
       </StackLayout>
     </AbsoluteLayout>
