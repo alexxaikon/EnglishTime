@@ -123,6 +123,8 @@
     <Content Include="Resources\Images\guess.png" />
     <Content Include="Resources\Images\list.png" />
     <Content Include="Resources\Images\list2.png" />
+    <EmbeddedResource Include="Resources\Images\logo2.png" />
+    <EmbeddedResource Include="Resources\Images\logo3.png" />
     <Content Include="Resources\Images\plus.png" />
     <Content Include="Resources\Images\writeText.png" />
   </ItemGroup>

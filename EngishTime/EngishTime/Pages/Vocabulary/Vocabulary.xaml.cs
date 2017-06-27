@@ -57,5 +57,17 @@ namespace EngishTime.Pages.Vocabulary
             }
             wordList.ItemsSource = filtredWords;
         }
+
+        private void englishButton_Clicked(object sender, EventArgs e)
+        {
+            russianUnderLine.IsVisible = false;
+            englishUnderLine.IsVisible = true;
+        }
+
+        private void russianButton_Clicked(object sender, EventArgs e)
+        {
+            russianUnderLine.IsVisible = true;
+            englishUnderLine.IsVisible = false;
+        }
     }
 }

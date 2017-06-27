@@ -7,15 +7,18 @@
     <StackLayout BackgroundColor="White">
         <StackLayout BackgroundColor="#EDE7F6">
             <AbsoluteLayout Padding="0,10,0,0">
-                <Button BackgroundColor="Transparent" TextColor="#673AB7" Text="English" AbsoluteLayout.LayoutBounds=".2, 1, 120, 40"
-        AbsoluteLayout.LayoutFlags="PositionProportional" />
-                <Button BackgroundColor="Transparent" TextColor="#673AB7" Text="Russian" AbsoluteLayout.LayoutBounds=".8, 1, 120, 40"
-        AbsoluteLayout.LayoutFlags="PositionProportional" />
+                <StackLayout AbsoluteLayout.LayoutBounds=".2, 1, 120, 45" AbsoluteLayout.LayoutFlags="PositionProportional" Spacing="0">
+                    <Button x:Name="englishButton" BackgroundColor="Transparent" TextColor="#673AB7" Text="English" HeightRequest="40" Clicked="englishButton_Clicked"/>
+                    <BoxView x:Name="englishUnderLine" BackgroundColor="#673AB7" WidthRequest="100" HeightRequest="2"/>
+                </StackLayout>
+                <StackLayout AbsoluteLayout.LayoutBounds=".8, 1, 120, 45" AbsoluteLayout.LayoutFlags="PositionProportional" Spacing="0">
+                    <Button x:Name="russianButton" BackgroundColor="Transparent" TextColor="#673AB7" Text="Russian"  HeightRequest="40" Clicked="russianButton_Clicked"/>
+                    <BoxView x:Name="russianUnderLine" BackgroundColor="#673AB7" WidthRequest="120" HeightRequest="2" IsVisible="False"/>
+                </StackLayout>
             </AbsoluteLayout>
             <AbsoluteLayout>
                 <Entry x:Name="FindEntry" Text="" Placeholder="Enter new word" TextColor="#673AB7" PlaceholderColor="#673AB7" TextChanged="FindEntry_TextChanged"
-                       AbsoluteLayout.LayoutBounds=".25, 0.5, 0.9, 1" AbsoluteLayout.LayoutFlags="All"
-               />
+                       AbsoluteLayout.LayoutBounds=".25, 0.5, 0.9, 1" AbsoluteLayout.LayoutFlags="All" />
             </AbsoluteLayout>
         </StackLayout>
         <ListView x:Name="wordList" RowHeight="70"  ItemSelected="OnItemSelected">
@@ -23,7 +26,7 @@
                 <DataTemplate>
                     <ViewCell >
                         <ViewCell.View>
-                            <StackLayout>
+                            <StackLayout Margin="10,0,0,0">
                                 <Label Text="{Binding En}" FontSize="Large" TextColor="#673AB7"/>
                                 <Label Text="{Binding Ru}" FontSize="Medium"/>
                             </StackLayout>

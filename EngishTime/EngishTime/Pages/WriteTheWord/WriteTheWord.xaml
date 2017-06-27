@@ -10,8 +10,10 @@
         <StackLayout Spacing="8" AbsoluteLayout.LayoutBounds=".5, .6" AbsoluteLayout.LayoutFlags="PositionProportional">
             <Entry x:Name="checkWordEntry" HeightRequest="50" WidthRequest="200" Text="" Placeholder="Please enter answer" TextColor="#673AB7" PlaceholderColor="#9575CD"/>
             <BoxView BackgroundColor="Transparent" HeightRequest="40"/>
-            <Button x:Name="checkButton" Text = "Check" Clicked="checkButton_Clicked" BackgroundColor="#673AB7" TextColor="White" BorderRadius="8"  BorderWidth="1" HeightRequest="40" WidthRequest="180" HorizontalOptions="Center"/>
+            <Button x:Name="checkButton" Text = "Check" Clicked="checkButton_Clicked" BackgroundColor="#673AB7" TextColor="White" BorderRadius="8"  BorderWidth="1" HeightRequest="40" WidthRequest="180" HorizontalOptions="Center" Margin="-10"/>
         </StackLayout>
-        <Label x:Name="AnswerAlert" Text="" TextColor ="#673AB7" BackgroundColor="#B2DFDB" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" AbsoluteLayout.LayoutBounds=".5, .02, 240, 180" AbsoluteLayout.LayoutFlags="PositionProportional" IsVisible="False"/>
+        <Frame  x:Name="AnswerAlert" CornerRadius="25" BackgroundColor="#B2FF59" AbsoluteLayout.LayoutBounds=".5, .90, 240, 65" AbsoluteLayout.LayoutFlags="PositionProportional" IsVisible="False">
+            <Label x:Name="AnswerText" Margin="0" HorizontalOptions="Center" VerticalOptions="Center" Text="" TextColor ="#673AB7" BackgroundColor="#B2FF59" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  FontSize="Medium" />
+        </Frame>
     </AbsoluteLayout>
 </ContentPage>

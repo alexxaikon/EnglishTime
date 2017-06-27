@@ -34,24 +34,30 @@ namespace EngishTime.Pages.WriteTheWord
 
         private async void checkButton_Clicked(object sender, EventArgs e)
         {
-            if(_currentCheckWord.En.ToLower() == checkWordEntry.Text.ToLower())
+            checkWordEntry.IsEnabled = false;
+            checkButton.IsEnabled = false;
+            if (_currentCheckWord.En.ToLower() == checkWordEntry.Text.ToLower())
             {
-                AnswerAlert.Text = "Yes, you right!";
-                AnswerAlert.BackgroundColor = Color.FromHex("#4CAF50");
+                AnswerText.Text = "Yes, you right!";
+                AnswerAlert.BackgroundColor = Color.FromHex("#8BC34A");
+                AnswerText.BackgroundColor = Color.FromHex("#8BC34A");
                 AnswerAlert.IsVisible = true;
                 await Task.Delay(2000);
                 AnswerAlert.IsVisible = false;
             }
             else
             {
-                AnswerAlert.Text = "No, you wrong!";
+                AnswerText.Text = "No, you wrong!";
                 AnswerAlert.BackgroundColor = Color.FromHex("#FF7043");
+                AnswerText.BackgroundColor = Color.FromHex("#FF7043");
                 AnswerAlert.IsVisible = true;
                 await Task.Delay(2000);
                 AnswerAlert.IsVisible = false;
             }
             checkWordEntry.Text = string.Empty;
             Populate();
+            checkWordEntry.IsEnabled = true;
+            checkButton.IsEnabled = true;
         }
     }
 }

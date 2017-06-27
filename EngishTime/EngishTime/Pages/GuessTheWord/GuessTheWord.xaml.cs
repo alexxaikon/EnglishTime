@@ -100,7 +100,7 @@ namespace EngishTime.Pages.GuessTheWord
         {
             if(1 == _sureBtnNum)
             {
-                ((Button)sender).BackgroundColor = Color.FromHex("#4CAF50");
+                ((Button)sender).BackgroundColor = Color.FromHex("#8BC34A");
                 await Task.Delay(2000);
                 ((Button)sender).BackgroundColor = Color.White;
             }
@@ -117,7 +117,7 @@ namespace EngishTime.Pages.GuessTheWord
         {
             if (2 == _sureBtnNum)
             {
-                ((Button)sender).BackgroundColor = Color.FromHex("#4CAF50");
+                ((Button)sender).BackgroundColor = Color.FromHex("#8BC34A");
                 await Task.Delay(2000);
                 ((Button)sender).BackgroundColor = Color.White;
             }
@@ -134,7 +134,7 @@ namespace EngishTime.Pages.GuessTheWord
         {
             if (3 == _sureBtnNum)
             {
-                ((Button)sender).BackgroundColor = Color.FromHex("#4CAF50");
+                ((Button)sender).BackgroundColor = Color.FromHex("#8BC34A");
                 await Task.Delay(2000);
                 ((Button)sender).BackgroundColor = Color.White;
             }
@@ -151,7 +151,7 @@ namespace EngishTime.Pages.GuessTheWord
         {
             if (4 == _sureBtnNum)
             {
-                ((Button)sender).BackgroundColor = Color.FromHex("#4CAF50");
+                ((Button)sender).BackgroundColor = Color.FromHex("#8BC34A");
                 await Task.Delay(2000);
                 ((Button)sender).BackgroundColor = Color.White;
             }

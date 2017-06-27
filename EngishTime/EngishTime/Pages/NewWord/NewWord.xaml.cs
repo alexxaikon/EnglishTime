@@ -49,8 +49,6 @@ namespace EngishTime.Pages.NewWord
                 int resultId = App.Database.SaveItem(word);
                 if(resultId != 0)
                 {
-                    EnWordEntry.Text = "";
-                    RuWordEntry.Text = "";
                     if(_existingWord == null)
                     {
                         saveButton.IsEnabled = false;
@@ -62,6 +60,8 @@ namespace EngishTime.Pages.NewWord
                         EnWordEntry.IsEnabled = true;
                         RuWordEntry.IsEnabled = true;
                         SaveAlert.IsVisible = false;
+                        EnWordEntry.Text = "";
+                        RuWordEntry.Text = "";
                     }
                     else
                     {

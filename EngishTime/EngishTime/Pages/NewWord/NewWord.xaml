@@ -19,12 +19,8 @@
             <Button x:Name="deleteButton" Text = "Delete" Clicked="deleteButton_Clicked" BackgroundColor="#673AB7" TextColor="White" BorderRadius="8"  BorderWidth="1" HeightRequest="40" WidthRequest="180" HorizontalOptions="Center" />
         </StackLayout>
 
-        <Label x:Name="SaveAlert" Text="Word added to vacabulary" TextColor ="#673AB7" BackgroundColor="#4CAF50" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium" AbsoluteLayout.LayoutBounds=".5, .02, 230, 150" AbsoluteLayout.LayoutFlags="PositionProportional" IsVisible="False"/>
+        <Frame  x:Name="SaveAlert" CornerRadius="25" BackgroundColor="#8BC34A" AbsoluteLayout.LayoutBounds=".5, .90, 240, 65" AbsoluteLayout.LayoutFlags="PositionProportional" IsVisible="False">
+            <Label x:Name="SaveText" Margin="0" HorizontalOptions="Center" VerticalOptions="Center" Text="Word added to vacabulary" TextColor ="#673AB7" BackgroundColor="#8BC34A" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  FontSize="Medium" />
+        </Frame>
     </AbsoluteLayout>
-
-
-
-
-    
-    
 </ContentPage>
